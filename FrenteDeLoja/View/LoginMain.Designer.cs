@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.linkTrocar = new System.Windows.Forms.LinkLabel();
             this.linkEsqueci = new System.Windows.Forms.LinkLabel();
@@ -44,6 +45,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.picSenha = new System.Windows.Forms.PictureBox();
             this.picUsuario = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuario)).BeginInit();
@@ -59,6 +61,7 @@
             this.linkTrocar.TabIndex = 29;
             this.linkTrocar.TabStop = true;
             this.linkTrocar.Text = "Trocar Senha";
+            this.linkTrocar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkTrocar_LinkClicked);
             // 
             // linkEsqueci
             // 
@@ -72,6 +75,7 @@
             this.linkEsqueci.TabStop = true;
             this.linkEsqueci.Text = "Esqueci a Senha";
             this.linkEsqueci.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkEsqueci.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkEsqueci_LinkClicked);
             // 
             // lblHoraAgora
             // 
@@ -80,9 +84,8 @@
             this.lblHoraAgora.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblHoraAgora.Location = new System.Drawing.Point(322, 213);
             this.lblHoraAgora.Name = "lblHoraAgora";
-            this.lblHoraAgora.Size = new System.Drawing.Size(38, 13);
+            this.lblHoraAgora.Size = new System.Drawing.Size(0, 13);
             this.lblHoraAgora.TabIndex = 27;
-            this.lblHoraAgora.Text = "label4";
             // 
             // lblDataAgora
             // 
@@ -91,9 +94,8 @@
             this.lblDataAgora.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblDataAgora.Location = new System.Drawing.Point(322, 236);
             this.lblDataAgora.Name = "lblDataAgora";
-            this.lblDataAgora.Size = new System.Drawing.Size(38, 13);
+            this.lblDataAgora.Size = new System.Drawing.Size(0, 13);
             this.lblDataAgora.TabIndex = 26;
-            this.lblDataAgora.Text = "label3";
             // 
             // lblTextoHora
             // 
@@ -124,6 +126,9 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(100, 20);
             this.txtSenha.TabIndex = 17;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // txtUsuario
             // 
@@ -172,6 +177,7 @@
             this.btnSair.Size = new System.Drawing.Size(75, 39);
             this.btnSair.TabIndex = 19;
             this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnLogin
             // 
@@ -201,6 +207,12 @@
             this.picUsuario.Size = new System.Drawing.Size(27, 28);
             this.picUsuario.TabIndex = 22;
             this.picUsuario.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // frmLogin
             // 
@@ -255,5 +267,6 @@
         public System.Windows.Forms.PictureBox picUsuario;
         public System.Windows.Forms.Label lblSenha;
         public System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Timer timer1;
     }
 }
