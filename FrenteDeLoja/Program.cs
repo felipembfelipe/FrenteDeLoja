@@ -1,12 +1,4 @@
-﻿using AutoMapper;
-using FrenteDeLoja.Infra.AutoMapper;
-using FrenteDeLoja.Infra.Contexto;
-using FrenteDeLoja.Repositories;
-using FrenteDeLoja.Repositories.Interfaces;
-using FrenteDeLoja.Services;
-using FrenteDeLoja.Services.Interfaces;
-using FrenteDeLoja.View.Login;
-using Microsoft.EntityFrameworkCore;
+﻿using FrenteDeLoja.View.Login;
 using System;
 using System.Windows.Forms;
 using Unity;

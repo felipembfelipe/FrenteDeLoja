@@ -1,5 +1,4 @@
-﻿using FrenteDeLoja.DTO;
-using FrenteDeLoja.Models;
+﻿using FrenteDeLoja.Models;
 using System.Threading.Tasks;
 
 namespace FrenteDeLoja.Services.Interfaces

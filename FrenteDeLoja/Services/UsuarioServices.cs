@@ -1,11 +1,6 @@
-﻿using FrenteDeLoja.DTO;
-using FrenteDeLoja.Models;
+﻿using FrenteDeLoja.Models;
 using FrenteDeLoja.Repositories.Interfaces;
 using FrenteDeLoja.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FrenteDeLoja.Services

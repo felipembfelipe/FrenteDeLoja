@@ -231,18 +231,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\UsuarioDTO.cs" />
-    <Compile Include="Infra\ApplicationServiceCollectionExtensions.cs" />
+    <Compile Include="Models\DTO\UsuarioDTO.cs" />
     <Compile Include="Infra\AutoMapper\MappingProfile.cs" />
     <Compile Include="Infra\Contexto\MDContext.cs" />
-    <Compile Include="Infra\DependencyInjectionConfig.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Generico\IRepositorioGeneric.cs" />
-    <Compile Include="Repositories\Generico\RepositorioGeneric.cs" />
-    <Compile Include="Repositories\Interfaces\IUsuarioRepositorio.cs" />
-    <Compile Include="Repositories\UsuarioRepositorio.cs" />
+    <Compile Include="Infra\Repositories\Generico\IRepositorioGeneric.cs" />
+    <Compile Include="Infra\Repositories\Generico\RepositorioGeneric.cs" />
+    <Compile Include="Infra\Repositories\Interfaces\IUsuarioRepositorio.cs" />
+    <Compile Include="Infra\Repositories\UsuarioRepositorio.cs" />
     <Compile Include="Services\Interfaces\ILoginServices.cs" />
     <Compile Include="Services\Interfaces\IUsuarioServices.cs" />
     <Compile Include="Services\LoginServices.cs" />
@@ -273,7 +271,6 @@
     <EmbeddedResource Include="View\LoginMain.resx">
       <DependentUpon>LoginMain.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Infra\Contexto\appsettings.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -289,12 +286,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Helpers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
     <Content Include="Resources\000000.png" />
     <Content Include="Resources\0000000.png" />
     <Content Include="Resources\10364589_667151180000530_1636953782_n.jpg" />

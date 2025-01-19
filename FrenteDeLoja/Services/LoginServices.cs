@@ -1,16 +1,9 @@
 ﻿using AutoMapper;
-using FrenteDeLoja.DTO;
 using FrenteDeLoja.Models;
 using FrenteDeLoja.Services.Interfaces;
 using FrenteDeLoja.View;
-using FrenteDeLoja.View.Login;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Unity;
 
 namespace FrenteDeLoja.Services
 {

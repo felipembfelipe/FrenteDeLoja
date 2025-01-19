@@ -43,5 +43,10 @@ namespace FrenteDeLoja.View.Login
             // como redirecionar o usuário para outra tela, etc.
             MessageBox.Show($"Bem-vindo!");
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

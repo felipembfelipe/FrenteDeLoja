@@ -1,9 +1,6 @@
 ﻿using FrenteDeLoja.Infra.Contexto;
 using System;
-using System.Collections.Generic;
-using System.Data.Entity;  // Referência do Entity Framework 6
-using System.Linq;
-using System.Text;
+using System.Data.Entity;
 using System.Threading.Tasks;
 
 namespace FrenteDeLoja.Repositories.Generico
@@ -18,8 +15,6 @@ namespace FrenteDeLoja.Repositories.Generico
             _mdContext = mdContext;
             dbset = _mdContext.Set<TEntity>();
         }
-
-        private DbSet<TEntity> ObterEntidade() => dbset;
 
         public virtual async Task<bool> GravarObjeto(TEntity obj)
         {

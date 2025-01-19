@@ -1,11 +1,6 @@
 ﻿using AutoMapper;
-using FrenteDeLoja.DTO;
+using FrenteDeLoja.Models.DTO;
 using FrenteDeLoja.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FrenteDeLoja.Infra.AutoMapper
 {

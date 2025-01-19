@@ -6,11 +6,6 @@ using FrenteDeLoja.Repositories.Interfaces;
 using FrenteDeLoja.Services;
 using FrenteDeLoja.Services.Interfaces;
 using FrenteDeLoja.View.Login;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Unity;
 
 namespace FrenteDeLoja

@@ -2,9 +2,7 @@
 using FrenteDeLoja.Models;
 using FrenteDeLoja.Repositories.Generico;
 using FrenteDeLoja.Repositories.Interfaces;
-using System;
 using System.Data.Entity;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace FrenteDeLoja.Repositories
