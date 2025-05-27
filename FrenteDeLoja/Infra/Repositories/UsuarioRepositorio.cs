@@ -1,11 +1,12 @@
 ﻿using FrenteDeLoja.Infra.Contexto;
+using FrenteDeLoja.Infra.Repositories.Generico;
+using FrenteDeLoja.Infra.Repositories.Interfaces;
 using FrenteDeLoja.Models;
-using FrenteDeLoja.Repositories.Generico;
-using FrenteDeLoja.Repositories.Interfaces;
 using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 
-namespace FrenteDeLoja.Repositories
+namespace FrenteDeLoja.Infra.Repositories
 {
     public class UsuarioRepositorio : RepositorioGeneric<Usuario>, IUsuarioRepositorio
     {
@@ -13,6 +14,24 @@ namespace FrenteDeLoja.Repositories
 
         public UsuarioRepositorio(MDContext context) : base(context) { _context = context; }
 
-        public async Task<Usuario> RetornaUsuarioPorLoginESenha(string login, string senha) => await _context.Usuarios.FirstOrDefaultAsync(x => x.LoginUsuario.ToUpper() == login && x.SenhaUsuario.ToUpper() == senha);
+        public async Task<Usuario> RetornaUsuarioPorLoginESenha(string login, string senha) =>
+            await _context.Usuarios
+            .Include(tp => tp.TipoUsuario)
+            .FirstOrDefaultAsync(x =>
+            x.LoginUsuario.ToUpper() == login.ToUpper() &&
+            x.SenhaUsuario == senha);
+
+        public async Task<Usuario> RetornaUsuarioPorLogin(string login) =>
+            await _context.Usuarios
+            .Include(tp => tp.TipoUsuario)
+            .FirstOrDefaultAsync(x =>
+            x.LoginUsuario.ToUpper() == login.ToUpper());
+
+        public async Task<Usuario> RetornaUsuarioPorEmailELogin(string usuario, string email) =>
+            await _context.Usuarios
+            .Include(tp => tp.TipoUsuario)
+            .FirstOrDefaultAsync(x =>
+            x.LoginUsuario.ToUpper() == usuario.ToUpper() && 
+            x.EmailLogin.ToUpper() == email.ToUpper());
     }
 }

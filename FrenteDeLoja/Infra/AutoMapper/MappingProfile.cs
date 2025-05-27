@@ -9,6 +9,8 @@ namespace FrenteDeLoja.Infra.AutoMapper
         public MappingProfile()
         {
             CreateMap<Usuario, UsuarioDTO>().ReverseMap();
+
+            CreateMap<TipoUsuario, TipoUsuarioDTO>().ReverseMap();
         }
     }
 }

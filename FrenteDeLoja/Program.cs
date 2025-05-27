@@ -1,4 +1,4 @@
-﻿using FrenteDeLoja.View.Login;
+﻿using FrenteDeLoja.View;
 using System;
 using System.Windows.Forms;
 using Unity;

@@ -12,5 +12,7 @@ namespace FrenteDeLoja.Infra.Contexto
 
         public DbSet<Usuario> Usuarios { get; set; }
 
+        public DbSet<TipoUsuario> TipoUsuarios { get; set; }
     }
+
 }

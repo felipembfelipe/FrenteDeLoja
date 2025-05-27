@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using FrenteDeLoja.Infra.AutoMapper;
 using FrenteDeLoja.Infra.Contexto;
-using FrenteDeLoja.Repositories;
-using FrenteDeLoja.Repositories.Interfaces;
+using FrenteDeLoja.Infra.Repositories;
+using FrenteDeLoja.Infra.Repositories.Interfaces;
 using FrenteDeLoja.Services;
 using FrenteDeLoja.Services.Interfaces;
+using FrenteDeLoja.View;
 using FrenteDeLoja.View.Login;
 using Unity;
 
@@ -16,13 +17,17 @@ namespace FrenteDeLoja
         {
             var container = new UnityContainer();
 
-            // Regsitrar os forms
+            // Registrar os forms
             container.RegisterType<MDContext>();
             container.RegisterType<frmLogin>();
+            container.RegisterType<frmTrocaSenha>();
+            container.RegisterType<frmEsqueciSenha>();
+            container.RegisterType<frmLoading>();
+            container.RegisterType<frmTelaPrincipal>();
 
             // Registrar as dependências no Unity Container
-            container.RegisterType<ILoginServices, LoginServices>();
             container.RegisterType<IUsuarioServices, UsuarioServices>();
+            container.RegisterType<IEmailService, EmailService>();
 
             // Registrar outros repositorios
             container.RegisterType<IUsuarioRepositorio, UsuarioRepositorio>();

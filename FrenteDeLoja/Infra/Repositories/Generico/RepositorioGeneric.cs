@@ -3,7 +3,7 @@ using System;
 using System.Data.Entity;
 using System.Threading.Tasks;
 
-namespace FrenteDeLoja.Repositories.Generico
+namespace FrenteDeLoja.Infra.Repositories.Generico
 {
     public class RepositorioGeneric<TEntity> : IRepositorioGeneric<TEntity> where TEntity : class
     {
@@ -77,16 +77,6 @@ namespace FrenteDeLoja.Repositories.Generico
                     return false;
                 }
             }
-        }
-
-        public void Alterar(TEntity model)
-        {
-            _mdContext.Entry(model).State = EntityState.Modified;
-        }
-
-        public void Cadastrar(params TEntity[] models)
-        {
-            _mdContext.Set<TEntity>().AddRange(models);
         }
     }
 }
